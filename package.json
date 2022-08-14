@@ -10,6 +10,13 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.0.5"
+    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vue": "^1.0.0",
+    "astro": "^1.0.5",
+    "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "prettier": "^2.7.1"
   }
 }
