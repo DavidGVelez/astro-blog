@@ -3,12 +3,5 @@
 </template>
 
 <script>
-export default {
-    async mounted() {
-        console.log('Montado')
-    },
-    created() {
-        console.log('footer creado')
-    },
-}
+export default {}
 </script>

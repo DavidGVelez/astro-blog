@@ -1,25 +1,21 @@
 ---
 import BaseHeader from "@components/globals/BaseHeader.vue";
 import BaseFooter from "@components/globals/BaseFooter.vue";
+import BaseHead from "@components/globals/BaseHead.astro";
+
 import { router } from "../config";
 ---
 
 <html>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-</head>
+<BaseHead></BaseHead>
 
-<body class="">
+<body>
     <main class=" w-11/12 flex flex-col h-screen justify-between m-auto">
         <BaseHeader links={router}></BaseHeader>
-        <slot class="flex-1" />
+        <slot />
         <BaseFooter></BaseFooter>
     </main>
-
 </body>
 
 </html>
