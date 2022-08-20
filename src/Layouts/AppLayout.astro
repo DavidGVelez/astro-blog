@@ -2,8 +2,11 @@
 import BaseHeader from "@components/globals/BaseHeader.vue";
 import BaseFooter from "@components/globals/BaseFooter.vue";
 import BaseHead from "@components/globals/BaseHead.astro";
+import { Router } from "@Router/Router";
 
-import { router } from "../config";
+
+const pages = await Astro.glob("../pages/*.{astro, md}")
+const router = new Router(pages).getRoutes();
 ---
 
 <html>
@@ -11,11 +14,12 @@ import { router } from "../config";
 <BaseHead></BaseHead>
 
 <body>
-    <main class=" w-11/12 flex flex-col h-screen justify-between m-auto">
+    <main class="w-9/12 flex flex-col h-screen justify-between mx-auto ">
         <BaseHeader links={router}></BaseHeader>
         <slot />
         <BaseFooter></BaseFooter>
     </main>
+
 </body>
 
 </html>

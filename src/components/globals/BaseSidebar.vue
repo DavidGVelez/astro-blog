@@ -1,7 +1,7 @@
 <template>
     <section class="p-5">
         <ul>
-            <li v-for="(post, index) in posts" :key="index">
+            <li class="px-5" v-for="(post, index) in posts" :key="index">
                 <a :href="`/${post.slug}`">{{ post.title }}</a>
             </li>
         </ul>

@@ -1,0 +1,18 @@
+---
+
+export function getStaticPaths() {
+    return [
+        // Generates: /dogs/clifford
+        { params: { slug: 'clifford' } },
+        // Generates: /dogs/rover
+        { params: { slug: 'rover' } },
+        // Generates: /dogs/spot
+        { params: { slug: 'spot' } },
+    ];
+}
+const { slug } = Astro.params;
+
+console.log(slug)
+---
+
+<span>{slug}</span>
