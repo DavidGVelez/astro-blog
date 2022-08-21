@@ -4,13 +4,11 @@ export class Router {
     private routes: any
 
     public constructor(routes: any) {
-        console.log(routes)
         this.routes = routes
     }
 
     public getRoutes(): Array<Route> {
         return this.routes.map((route) => {
-            console.log(route)
             return {
                 name: this.sanetizeName(route.url),
                 slug: route.url,

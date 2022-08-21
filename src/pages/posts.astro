@@ -1,9 +1,14 @@
 ---
 import AppLayout from "@layouts/AppLayout.astro";
+import {Posts} from "@mocks/Posts"
 
+console.log('posts',Posts);
 ---
 
 <AppLayout>
 
+<section>
+    {Posts[0]}
+</section>
 
 </AppLayout>
